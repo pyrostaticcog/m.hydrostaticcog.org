@@ -5,20 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/projects.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/brython@3.9.1/brython.min.js">
-    </script>
+    <script type="text/javascript" src="scripts/mcping.js"></script>
+    <script type='text/javascript' src="scripts/git-issues.js"></script>
+    <script type='text/javascript' src='scripts/gh-version.js'></script>
     <title>Projects</title>
     <link rel="shortcut icon" type="image/png" href="assets/hydrostaticcog.png"/>
 </head>
-<body onload=brython()>
-    <script type='text/python'>
-        import requests
-        import json
-        from browser import document
-        page = requests.get('https://api.mcsrvstat.us/2/vegasmp.hydrostaticcog.org')
-        results = json.loads(page.text)
-    </script>
+<body>
     <div class='content'>
         <div class='header'>
             <h1><img src="assets/hydrostaticcog.png" alt="hydrostaticcog" width="70" class='logo'>hydrostaticcog</h1>
@@ -33,17 +26,27 @@
         <div class='project-1'>
             <h2>Grick Heart Discord Bot</h2>
             <img src='assets/grick.png' alt='grick-heart' class='project-img'>
-            <p>I am working on a Discord bot to play Dungeons and Dragons in Discord Servers.</p>
+            <p>I am working on a Discord bot to play Dungeons and Dragons in Discord Servers.<br>It currently only really rolls dice and looks up spells, but more features are being worked on</p>
+            <div class='git-stats'>
+                <h3>Current Version: <span id='ghversion-number'></span></h3>
+                <h3>Issues being worked on:</h3>
+                <p>Issue #<span id='issue-number'></span>: <span id='issue-name'></span><br>Issue State: <span id='issue-state'></span></p>
+            </div>
+            <h3>Learn more at <input type="button" onclick="location.href='https://github.com/Grick-Heart-Project/Grick-Heart';" value="GitHub Repo" style='background-color: #333; color: white;'></h3>
         </div>
         <div class='project-2'>
             <h2>Vega SMP</h2>
             <img src='assets/vega.png' alt='vega' class='project-img' width='100'>
-            <P>A private SMP server that I admininstrate</P>
+            <P>I run a private SMP server for some of my old friends called the Vega SMP.<br>It is a semi-vanilla SMP that is an area for fun and minigames</p>
+            <div class='status'>
+                <h3>Server Status</h3>
+                <p>Online: <span id='status-isOnline'></span><br>Players: <span id='status-playerCount'></span><br><span id='status-playerList'></span></p>
+            </div>
         </div>
         <nav class="footnav">
             <a onclick="location.href='index.html';" class="navbar-item">Home</a>
             <a onclick="location.href='projects.html';" class="navbar-item">Projects</a>
-            <a onclick="location.href='contact.html';"" class="navbar-item">Contact</a>
+            <a onclick="location.href='contact.html';" class="navbar-item">Contact</a>
             <a href="https://mail.hydrostaticcog.org" class="navbar-item">WebMail</a>
             <p>&copy hydrostaticcog 2021</p>
         </nav>
