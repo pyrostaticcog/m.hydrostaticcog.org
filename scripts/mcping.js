@@ -10,15 +10,14 @@ request.open('GET', 'https://api.mcsrvstat.us/2/vegasmp.hydrostaticcog.org', tru
 request.onload = function () {
     var data = JSON.parse(this.response)
     if (data.online = 'true') {
-        console.log(data.players.list)
-        if (data.players.list == 'undefined') {
-            var playerList = 'No players online'
+        if (!data.players.list) {
+            var playerList = 'No Players Online'
         } else {
             var playerList = data.players.list
         }
+        document.getElementById("status-playerList").innerHTML = playerList;
         document.getElementById("status-isOnline").innerHTML = data.online;
         document.getElementById("status-playerCount").innerHTML = data.players.online +'/'+ data.players.max;
-        document.getElementById("status-playerList").innerHTML = data.players.list;
 
     }
     else {
