@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
-/* The alert message box */
+
+body {
+    background-color: rgb(162, 252, 186);
+    margin: auto;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
 .alert {
   padding: 15px;
-  background-color: rgb(255, 0, 0); /* Red */
+  background-color: rgb(255, 0, 0);
   color: white;
   margin-bottom: 10px;
 }
 
-/* The close button */
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -20,16 +26,8 @@
   transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
-}
-
-body {
-    background-color: rgb(162, 252, 186);
-    margin: auto;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
 }
 
 .content {
