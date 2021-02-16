@@ -1,7 +1,3 @@
-const app = document.getElementById('project-2')
-const container = document.createElement('div')
-container.setAttribute('class', 'container')
-
 var request = new XMLHttpRequest()
 
 // Open a new connection, using the GET request on the URL endpoint
