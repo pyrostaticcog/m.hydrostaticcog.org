@@ -5,7 +5,7 @@ request.open('GET', 'https://raw.githubusercontent.com/Grick-Heart-Project/Grick
 
 request.onload = function () {
     var data = JSON.parse(this.response)
-    document.getElementById('ghversion-number').innerHTML = data.version;
+    document.getElementById('ghversion-number').innerHTML = data.ghVersion;
 }
 
 // Send request
