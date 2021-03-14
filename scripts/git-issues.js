@@ -1,7 +1,7 @@
 var request = new XMLHttpRequest()
 
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://api.github.com/repos/Grick-Heart-Project/Grick-Heart/issues/23', true)
+request.open('GET', 'https://api.github.com/repos/Grick-Heart-Project/Grick-Heart/issues/27', true)
 
 request.onload = function () {
     var data = JSON.parse(this.response)
